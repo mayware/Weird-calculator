@@ -62,6 +62,7 @@ body {
     margin: 0;
     padding: 0 .5rem 0 .5rem;
     margin-bottom: .5rem;
+    transition: 200ms ease-in-out;
 }
 
 .number-field::-webkit-inner-spin-button,
@@ -74,6 +75,12 @@ body {
     -moz-appearance: none;
 }
 
+.number-field:focus {
+    outline: none;
+    border-color: #ffd60a;
+    transition: 200ms ease-in-out;
+}
+
 
 .results-field {
     height: 75px;
@@ -82,16 +89,22 @@ body {
     font-weight: 500;
     margin-bottom: .5rem;
     padding: .5rem;
-    border: 1px solid #0582ca;
+    border: 1px solid #000;
     border-radius: 5px;
     resize: none;
-    background: #231942;
+    background: #1a1d1a;
     color: #cad2c5;
     cursor: not-allowed;
 }
 
 .results-field:focus {
     outline: none;
+}
+
+.results-field:focus {
+    outline: none;
+    border-color: #ffd60a;
+    transition: 200ms ease-in-out;
 }
 
 .action-panel {
@@ -124,15 +137,29 @@ body {
 }
 
 .count-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: .5rem;
     font-size: 16px;
     font-weight: 500;
     background: #003f88;
+    border: none;
     color: #cad2c5;
     cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.count-btn:hover {
+    background: #001d3d;
+    transition: 200ms ease-in-out;
 }
 
 .rand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
     font-size: 16px;
     font-weight: 500;
     background: #04a777;
@@ -140,8 +167,26 @@ body {
     cursor: pointer;
 }
 
+.rand-btn:hover {
+    background: #00916e;
+    transition: 200ms ease-in-out;
+}
+
 .btn-text {
     margin-right: .5rem;
+}
+
+.download-btn {
+    margin-top: .5rem;
+    padding: .5rem;
+    font-size: 16px;
+    font-weight: 500;
+    background: #003f88;
+    border: none;
+    color: #cad2c5;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    width: 100%;
 }
 
 .calculator-img {
@@ -166,7 +211,6 @@ body {
     background: #003f88;
     color: #000;
 }
-
 
 /*  */
 
@@ -194,7 +238,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: yellow;
+    background-color: #0582ca;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -206,7 +250,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: #fff;
+    background-color: #ffd60a;
     -webkit-transition: .4s;
     transition: .4s;
 }
