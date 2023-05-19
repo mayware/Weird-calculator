@@ -177,16 +177,25 @@ body {
 }
 
 .download-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-top: .5rem;
     padding: .5rem;
     font-size: 16px;
     font-weight: 500;
-    background: #003f88;
-    border: none;
+    background: #212529;
+    border: 1px solid #8ac926;
     color: #cad2c5;
     cursor: pointer;
     transition: 200ms ease-in-out;
-    width: 100%;
+}
+
+.download-btn:hover {
+    background: #8ac926;
+    color: #000;
+    transition: 200ms ease-in-out;
 }
 
 .calculator-img {
