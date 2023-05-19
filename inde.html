@@ -16,35 +16,41 @@
 
 <body>
     <div class="container">
-        <div class="appliation-title">
-            <span class="app-title-text">Unusual Calcutor</span>
-        </div>
         <div class="calculator">
-            <div class="calcultor-control">
-                <input type="text" class="number-field" placeholder="Args"
-                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                <textarea class="results-field" readonly="true" placeholder="Result"></textarea>
-                <div class="action-panel">
-                    <select class="select-menu">
-                        <option value="">Choose operand</option>
-                        <option value="&#8512;">&#8512;</option>
-                        <option value="&#8508;">&#8508;</option>
-                        <option value="&#60;">&#60;</option>
-                        <option value="&#62;">&#62;</option>
-                    </select>
-                    <button class="count-btn">
-                        <span class="btn-text">Count</span>
-                        <span class="material-symbols-outlined">calculate</span>
-                    </button>
-                    <button class="rand-btn">
-                        <span class="btn-text">Fill</span>
-                        <span class="material-symbols-outlined">smart_button</span>
-                    </button>
+            <div class="calc-main-block">
+                <div class="app-title">
+                    <span class="app-title-text">Unusual Calcutor</span>
+                </div>
+                <div class="calcultor-control">
+                    <input type="text" class="number-field" placeholder="Args"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <textarea class="results-field" readonly="true" placeholder="Result"></textarea>
+                    <div class="action-panel">
+                        <select class="select-menu">
+                            <option value="">Choose any</option>
+                            <option value="&#8512;">&#8512;</option>
+                            <option value="&#8508;">&#8508;</option>
+                            <option value="&#60;">&#60;</option>
+                            <option value="&#62;">&#62;</option>
+                        </select>
+                        <button class="count-btn">
+                            <span class="btn-text">Count</span>
+                            <span class="material-symbols-outlined">calculate</span>
+                        </button>
+                        <button class="rand-btn">
+                            <span class="btn-text">Fill</span>
+                            <span class="material-symbols-outlined">smart_button</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="calculator-image">
-                <h1>image</h1>
-            </div>
+            <img src="./calculator-image.png" class="calculator-img" alt="calculator-image">
+        </div>
+        <div class="color-changer">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
 

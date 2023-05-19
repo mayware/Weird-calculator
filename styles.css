@@ -13,12 +13,11 @@ body {
 }
 
 .container {
-    padding: 1.5rem;
-    background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
+    height: 100vh;
 }
 
-.appliation-title {
-    margin-bottom: 1rem;
+.app-title {
+    margin-bottom: .5rem;
 }
 
 .app-title-text {
@@ -32,6 +31,12 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
+}
+
+.calc-main-block {
+    position: relative;
+    padding: 1.5rem;
 }
 
 .calcultor-control {
@@ -111,7 +116,9 @@ body {
 .select-menu {
     margin-right: .5rem;
     padding: 0 .5rem 0 .5rem;
-    border: 2px solid #000;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #495057;
     background: #212529;
     color: #cad2c5;
 }
@@ -137,13 +144,94 @@ body {
     margin-right: .5rem;
 }
 
-
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.calculator-img {
+    position: absolute;
+    transform: rotate(180deg);
+    top: 75px;
+    right: 25px;
+    height: 300px;
+    width: 300px;
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
-} */
+.light-switch-btn {
+    padding: .5rem;
+    border: 1px solid #485563;
+    border-radius: 5px;
+    background: #101010;
+    color: #cad2c5;
+    cursor: pointer;
+}
+
+.light-switch-btn:hover {
+    background: #003f88;
+    color: #000;
+}
+
+
+/*  */
+
+.color-changer {
+    padding: 1.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: yellow;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #000814;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #fff;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*  */
