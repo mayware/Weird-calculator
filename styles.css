@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #101010;
+}
+
+.container {
+    padding: 1.5rem;
+    background-image: linear-gradient(135deg, #29323c 10%, #485563 100%);
+}
+
+.appliation-title {
+    margin-bottom: 1rem;
+}
+
+.app-title-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #cad2c5;
+}
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.calcultor-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.number-field {
+    height: 35px;
+    width: 350px;
+    margin-bottom: .5rem;
+    border: 1px solid #0582ca;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #000814;
+    color: #cad2c5;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+    padding: 0 .5rem 0 .5rem;
+    margin-bottom: .5rem;
+}
+
+.number-field::-webkit-inner-spin-button,
+.number-field::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.number-field::-moz-number-spin-box {
+    -moz-appearance: none;
+}
+
+
+.results-field {
+    height: 75px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    border: 1px solid #0582ca;
+    border-radius: 5px;
+    resize: none;
+    background: #231942;
+    color: #cad2c5;
+    cursor: not-allowed;
+}
+
+.results-field:focus {
+    outline: none;
+}
+
+.action-panel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.select-menu,
+.count-btn,
+.rand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.select-menu {
+    margin-right: .5rem;
+    padding: 0 .5rem 0 .5rem;
+    border: 2px solid #000;
+    background: #212529;
+    color: #cad2c5;
+}
+
+.count-btn {
+    margin-right: .5rem;
+    font-size: 16px;
+    font-weight: 500;
+    background: #003f88;
+    color: #cad2c5;
+    cursor: pointer;
+}
+
+.rand-btn {
+    font-size: 16px;
+    font-weight: 500;
+    background: #04a777;
+    color: #000;
+    cursor: pointer;
+}
+
+.btn-text {
+    margin-right: .5rem;
+}
+
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+} */
