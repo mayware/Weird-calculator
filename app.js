@@ -33,8 +33,12 @@ function countNum() {
 }
 
 function randNum() {
-    let randomNumber = Math.random() * 11;
-    inputField.value = Math.floor(randomNumber);
+    let randArray = [];
+    for (let i = 0; i < 10; i++) {
+        let randomNumber = Math.random() * 999;
+        randArray.push(Math.floor(randomNumber));
+    }
+    inputField.value = randArray.join(' ');
 }
 
 function downloadData() {
