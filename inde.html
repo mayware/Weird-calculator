@@ -23,8 +23,11 @@
                     <span class="app-title-text">Unusual Calcutor</span>
                 </div>
                 <div class="calcultor-control">
-                    <input type="text" class="number-field" placeholder="Args">
-                    <textarea class="results-field" readonly="true" placeholder="Result"></textarea>
+                    <div class="input-block">
+                        <input type="text" class="number-field" placeholder="Args">
+                        <button class="clear-input-btn" onclick="clearInput()">Clear</button>
+                    </div>
+                    <textarea class="results-field" placeholder="Results"></textarea>
                     <div class="action-panel">
                         <select class="select-menu">
                             <option value="">Choose any</option>
@@ -33,19 +36,22 @@
                             <option value="min">&#60;</option>
                             <option value="max">&#62;</option>
                         </select>
-                        <button class="count-btn" onclick="countNum()">
-                            <span class="btn-text">Count</span>
-                            <span class="material-symbols-outlined">calculate</span>
-                        </button>
                         <button class="rand-btn" onclick="randNum()">
                             <span class="btn-text">Fill</span>
                             <span class="material-symbols-outlined">smart_button</span>
                         </button>
+                        <button class="count-btn" onclick="countNum()">
+                            <span class="btn-text">Count</span>
+                            <span class="material-symbols-outlined">calculate</span>
+                        </button>
                     </div>
-                    <button class="download-btn" onclick="downloadData()">
-                        <span class="btn-text">Download</span>
-                        <span class="material-symbols-outlined">download</span>
-                    </button>
+                    <div class="download-block">
+                        <input type="text" class="download-name-input">
+                        <button class="download-btn" onclick="downloadData()">
+                            <span class="btn-text">Download</span>
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <img src="./calculator-image.png" class="calculator-img" alt="calculator-image">

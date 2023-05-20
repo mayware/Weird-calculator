@@ -44,6 +44,15 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
+    border-radius: 15px;
+    background: #101010;
+}
+
+.input-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
 }
 
 .number-field {
@@ -60,8 +69,8 @@ body {
     -moz-appearance: textfield;
     appearance: textfield;
     margin: 0;
+    margin-right: .3rem;
     padding: 0 .5rem 0 .5rem;
-    margin-bottom: .5rem;
     transition: 200ms ease-in-out;
 }
 
@@ -81,15 +90,29 @@ body {
     transition: 200ms ease-in-out;
 }
 
+.clear-input-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    font-size: 16px;
+    font-weight: 500;
+    background: #003f88;
+    border-radius: 5px;
+    border: none;
+    color: #cad2c5;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
 
 .results-field {
     height: 75px;
-    width: 350px;
+    width: 100%;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: .5rem;
     padding: .5rem;
-    border: 1px solid #000;
+    border: 1px solid #84a98c;
     border-radius: 5px;
     resize: none;
     background: #1a1d1a;
@@ -99,12 +122,6 @@ body {
 
 .results-field:focus {
     outline: none;
-}
-
-.results-field:focus {
-    outline: none;
-    border-color: #ffd60a;
-    transition: 200ms ease-in-out;
 }
 
 .action-panel {
@@ -140,7 +157,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: .5rem;
     font-size: 16px;
     font-weight: 500;
     background: #003f88;
@@ -159,6 +175,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: .5rem;
     border: none;
     font-size: 16px;
     font-weight: 500;
@@ -176,13 +193,32 @@ body {
     margin-right: .5rem;
 }
 
-.download-btn {
+.download-block {
     display: none;
+    align-items: center;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.download-name-input {
+    height: 35px;
+    width: 70%;
+    margin-right: .5rem;
+    border: 1px solid #0582ca;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #000814;
+    color: #cad2c5;
+}
+
+.download-btn {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: .5rem;
-    padding: .5rem;
+    height: 35px;
+    width: 30%;
     font-size: 16px;
     font-weight: 500;
     background: #212529;
