@@ -3,8 +3,9 @@ const resultField = document.querySelector('.results-field');
 const countBtn = document.querySelector('.count-btn');
 const randBtn = document.querySelector('.rand-btn');
 const selectMenu = document.querySelector('.select-menu');
-const donwloadBtn = document.querySelector('.download-btn');
 const downloadBlock = document.querySelector('.download-block');
+const downloadInput = document.querySelector('.download-name-input');
+const donwloadBtn = document.querySelector('.download-btn');
 const colorToggler = document.querySelector('.color-toggler');
 
 
@@ -58,19 +59,26 @@ function downloadData() {
     downloadLink.click();
     document.body.removeChild(downloadLink);
 }
-colorToggler.addEventListener('click', function () {
-    if (!colorToggler.checked) {
-        inputField.style.backgroundColor = '#cad2c5';
-        inputField.style.color = '#101010';
-        resultField.style.backgroundColor = '#cad2c5';
-        resultField.style.color = '#101010';
-    } else {
-        inputField.style.backgroundColor = '';
-        inputField.style.color = '';
-        resultField.style.backgroundColor = '';
-        resultField.style.color = '';
-    }
-})
+
+function changeBackgroundColor() {
+    var bgColorInput = document.querySelector(".bg-color-input");
+    var numberField = document.querySelector(".number-field");
+    var resultsField = document.querySelector(".results-field");
+    var bgColor = bgColorInput.value;
+
+    numberField.style.backgroundColor = bgColor;
+    resultsField.style.backgroundColor = bgColor;
+}
+
+function changeFontColor() {
+    var fontColorInput = document.querySelector(".font-color-input");
+    var numberField = document.querySelector(".number-field");
+    var resultsField = document.querySelector(".results-field");
+    var fontColor = fontColorInput.value;
+
+    numberField.style.color = fontColor;
+    resultsField.style.color = fontColor;
+}
 
 function clearInput() {
     inputField.value = '';

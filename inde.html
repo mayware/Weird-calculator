@@ -27,7 +27,7 @@
                         <input type="text" class="number-field" placeholder="Args">
                         <button class="clear-input-btn" onclick="clearInput()">Clear</button>
                     </div>
-                    <textarea class="results-field" placeholder="Results"></textarea>
+                    <textarea class="results-field" placeholder="Results" readonly></textarea>
                     <div class="action-panel">
                         <select class="select-menu">
                             <option value="">Choose any</option>
@@ -57,13 +57,30 @@
             <img src="./calculator-image.png" class="calculator-img" alt="calculator-image">
         </div>
         <div class="color-changer">
-            <label class="switch">
-                <input class="color-toggler" type="checkbox" checked>
-                <span class="slider round"></span>
-            </label>
+            <div class="color-input-block">
+                <input type="color" class="bg-color-input" onchange="changeBackgroundColor()">
+                <span class="input-color-title">Font color</span>
+            </div>
+            <div class="color-input-block">
+                <input type="color" class="font-color-input" onchange="changeFontColor()">
+                <span class="input-color-title">Background color</span>
+            </div>
         </div>
     </div>
 
+    <script>
+        function changeInputStyles(colorInput) {
+            var inputField = document.querySelector('.number-field');
+            var bgColorInput = document.querySelector('.color-changer input[type="color"]:first-child');
+            var fontColorInput = document.querySelector('.color-changer input[type="color"]:last-child');
+
+            if (colorInput === bgColorInput) {
+                inputField.style.backgroundColor = colorInput.value;
+            } else if (colorInput === fontColorInput) {
+                inputField.style.color = colorInput.value;
+            }
+        }
+    </script>
 
     <script src="app.js"></script>
 </body>
