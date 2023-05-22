@@ -14,7 +14,9 @@ function countNum() {
     let inpNum = inputField.value;
     const numbersArray = inpNum.split(" ");
     const numbers = numbersArray.map(num => parseInt(num));
-    if (inpNum !== '' && selectedOption !== '') {
+    if (inputField.value === '' && selectMenu.value === '') {
+        resultField.value = "Enter a valid number and operand";
+    } else {
         downloadBlock.style.display = 'flex';
         if (selectedOption == 'sum') {
             let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
@@ -29,8 +31,6 @@ function countNum() {
             let max = Math.max(...numbers);
             resultField.value = max;
         }
-    } else {
-        resultField.innerHTML = "Enter a valid number and operand";
     }
 }
 
