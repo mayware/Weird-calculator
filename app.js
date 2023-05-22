@@ -80,7 +80,8 @@ function changeFontColor() {
     resultsField.style.color = fontColor;
 }
 
-function clearInput() {
+function resetButton() {
     inputField.value = '';
     resultField.value = '';
+    downloadBlock.style.display = 'none';
 }

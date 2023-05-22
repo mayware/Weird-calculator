@@ -90,7 +90,7 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.clear-input-btn {
+.reset-btn {
     display: flex;
     align-items: center;
     justify-content: center;
